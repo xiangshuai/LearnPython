@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from mysite.views import hello, current_datetime, hours_ahead, display_meta
 from django.contrib import admin
 from books import views
+from contact.views import contact, thanks
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -17,6 +18,8 @@ urlpatterns = patterns('',
 	(r'^meta/$', display_meta),
 	(r'^search-form/$', views.search_form),
 	(r'^search/$', views.search),
+	(r'^contact/$', contact),
+	(r'^contact/thanks/',thanks),
 	
 
 )
